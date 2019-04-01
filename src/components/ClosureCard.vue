@@ -1,14 +1,12 @@
 <template lang="html">
   <div v-if="closure" class="card">
 
-    <div class="d-flex justify-content-between align-items-center bg-light">
-      <div class="card-header bg-light flex-fill">
-        <h5 class="card-title m-0">
-          {{ closure.STREET }}
-        </h5>
-      </div>
+    <div class="card-header d-flex justify-content-between align-items-center bg-light">
+      <h5 class="card-title m-0">
+        {{ closure.STREET }}
+      </h5>
 
-      <router-link to="/" class="btn btn-primary rounded-0">
+      <router-link to="/" class="btn btn-primary rounded-0 m-0">
         Back
       </router-link>
     </div>

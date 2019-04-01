@@ -1,4 +1,6 @@
-import { loadModules } from 'esri-loader'
+import { loadModules, loadCss } from 'esri-loader'
+
+loadCss('https://js.arcgis.com/4.10/esri/css/main.css')
 
 export default {
   actions: {

@@ -24355,23 +24355,21 @@ var Index_component = normalizeComponent(
 )
 
 /* harmony default export */ var Index = (Index_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1dcdf57b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Show.vue?vue&type=template&id=578aca20&lang=html&
-var Showvue_type_template_id_578aca20_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.loading)?_c('div',{},[_c('p',{staticClass:"h4 text-center m-0"},[_vm._v("\n      Loading...\n    ")])]):(_vm.closure)?_c("ClosureCard",{tag:"div"}):_c('p',{staticClass:"h4 text-center m-0"},[_vm._v("\n    No Result\n  ")])],1)}
-var Showvue_type_template_id_578aca20_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1dcdf57b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Show.vue?vue&type=template&id=629d874e&lang=html&
+var Showvue_type_template_id_629d874e_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.loading)?_c('div',{},[_c('p',{staticClass:"h4 text-center m-0"},[_vm._v("\n      Loading...\n    ")])]):(_vm.closure)?_c("ClosureCard",{tag:"div"}):_c('p',{staticClass:"h4 text-center m-0"},[_vm._v("\n    No Result\n  ")])],1)}
+var Showvue_type_template_id_629d874e_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/Show.vue?vue&type=template&id=578aca20&lang=html&
+// CONCATENATED MODULE: ./src/views/Show.vue?vue&type=template&id=629d874e&lang=html&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1dcdf57b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ClosureCard.vue?vue&type=template&id=e6a0f27a&lang=html&
-var ClosureCardvue_type_template_id_e6a0f27a_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.closure)?_c('div',{staticClass:"card"},[_c('div',{staticClass:"d-flex justify-content-between align-items-center bg-light"},[_c('div',{staticClass:"card-header bg-light flex-fill"},[_c('h5',{staticClass:"card-title m-0"},[_vm._v("\n        "+_vm._s(_vm.closure.STREET)+"\n      ")])]),_c('router-link',{staticClass:"btn btn-primary rounded-0",attrs:{"to":"/"}},[_vm._v("\n      Back\n    ")])],1),_c('div',{staticClass:"embed-responsive embed-responsive-16by9 bg-dark"},[_c('div',{ref:"map",staticClass:"embed-responsive-item"})]),(_vm.detour)?_c('div',{staticClass:"alert alert-info rounded-0"},[_c('strong',[_vm._v("Detour Available")]),_c('br'),_vm._v("\n    "+_vm._s(_vm.detour.REASON)+"\n  ")]):_vm._e(),_c('div',{staticClass:"card-body"},[_c('dl',[_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Street")]),_c('dd',[_vm._v(_vm._s(_vm.closure.STREET))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("From")]),_c('dd',[_vm._v(_vm._s(_vm.closure.FROM_STREET))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("To")]),_c('dd',[_vm._v(_vm._s(_vm.closure.TO_STREET))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Date Closed")]),_c('dd',[_vm._v(_vm._s(_vm.closure.formatDate('Date_Closed', 'LLLL')))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Date Reopened")]),_c('dd',[_vm._v(_vm._s(_vm.closure.formatDate('Date_Opened', 'LLLL')))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Reason")]),_c('dd',[_vm._v(_vm._s(_vm.closure.REASON))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Contractor")]),_c('dd',[_vm._v(_vm._s(_vm.closure.CONTRACTOR))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("TTC #")]),_c('dd',[_vm._v(_vm._s(_vm.closure.TTC_NBR))])])])]):_vm._e()}
-var ClosureCardvue_type_template_id_e6a0f27a_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1dcdf57b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ClosureCard.vue?vue&type=template&id=b5386748&lang=html&
+var ClosureCardvue_type_template_id_b5386748_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.closure)?_c('div',{staticClass:"card"},[_c('div',{staticClass:"card-header d-flex justify-content-between align-items-center bg-light"},[_c('h5',{staticClass:"card-title m-0"},[_vm._v("\n      "+_vm._s(_vm.closure.STREET)+"\n    ")]),_c('router-link',{staticClass:"btn btn-primary rounded-0 m-0",attrs:{"to":"/"}},[_vm._v("\n      Back\n    ")])],1),_c('div',{staticClass:"embed-responsive embed-responsive-16by9 bg-dark"},[_c('div',{ref:"map",staticClass:"embed-responsive-item"})]),(_vm.detour)?_c('div',{staticClass:"alert alert-info rounded-0"},[_c('strong',[_vm._v("Detour Available")]),_c('br'),_vm._v("\n    "+_vm._s(_vm.detour.REASON)+"\n  ")]):_vm._e(),_c('div',{staticClass:"card-body"},[_c('dl',[_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Street")]),_c('dd',[_vm._v(_vm._s(_vm.closure.STREET))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("From")]),_c('dd',[_vm._v(_vm._s(_vm.closure.FROM_STREET))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("To")]),_c('dd',[_vm._v(_vm._s(_vm.closure.TO_STREET))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Date Closed")]),_c('dd',[_vm._v(_vm._s(_vm.closure.formatDate('Date_Closed', 'LLLL')))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Date Reopened")]),_c('dd',[_vm._v(_vm._s(_vm.closure.formatDate('Date_Opened', 'LLLL')))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Reason")]),_c('dd',[_vm._v(_vm._s(_vm.closure.REASON))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("Contractor")]),_c('dd',[_vm._v(_vm._s(_vm.closure.CONTRACTOR))]),_c('dt',{staticClass:"font-weight-bold"},[_vm._v("TTC #")]),_c('dd',[_vm._v(_vm._s(_vm.closure.TTC_NBR))])])])]):_vm._e()}
+var ClosureCardvue_type_template_id_b5386748_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ClosureCard.vue?vue&type=template&id=e6a0f27a&lang=html&
+// CONCATENATED MODULE: ./src/components/ClosureCard.vue?vue&type=template&id=b5386748&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ClosureCard.vue?vue&type=script&lang=js&
-//
-//
 //
 //
 //
@@ -24451,8 +24449,8 @@ var ClosureCardvue_type_template_id_e6a0f27a_lang_html_staticRenderFns = []
 
 var ClosureCard_component = normalizeComponent(
   components_ClosureCardvue_type_script_lang_js_,
-  ClosureCardvue_type_template_id_e6a0f27a_lang_html_render,
-  ClosureCardvue_type_template_id_e6a0f27a_lang_html_staticRenderFns,
+  ClosureCardvue_type_template_id_b5386748_lang_html_render,
+  ClosureCardvue_type_template_id_b5386748_lang_html_staticRenderFns,
   false,
   null,
   null,
@@ -24491,13 +24489,21 @@ var ClosureCard_component = normalizeComponent(
   computed: mapState({
     loading: function loading(state) {
       return state.loading;
-    },
-    closure: function closure(state) {
-      return state.closures.active;
     }
   }),
+  data: function data() {
+    return {
+      closure: null
+    };
+  },
   mounted: function mounted() {
-    this.fetchClosure(this.id);
+    var _this = this;
+
+    this.fetchClosure(this.id).then(function (closure) {
+      // TODO: vuex loading state should not show card before detour data is loaded
+      // temp fix: setting the closure once the promise is finished ensures any detour data is loaded
+      _this.closure = closure;
+    });
   }
 });
 // CONCATENATED MODULE: ./src/views/Show.vue?vue&type=script&lang=js&
@@ -24512,8 +24518,8 @@ var ClosureCard_component = normalizeComponent(
 
 var Show_component = normalizeComponent(
   views_Showvue_type_script_lang_js_,
-  Showvue_type_template_id_578aca20_lang_html_render,
-  Showvue_type_template_id_578aca20_lang_html_staticRenderFns,
+  Showvue_type_template_id_629d874e_lang_html_render,
+  Showvue_type_template_id_629d874e_lang_html_staticRenderFns,
   false,
   null,
   null,
@@ -24543,9 +24549,6 @@ var router = new vue_router_esm({
   }]
 });
 /* harmony default export */ var src_router = (router);
-// EXTERNAL MODULE: ./node_modules/esri-loader/dist/umd/esri-loader.js
-var esri_loader = __webpack_require__("afaa");
-
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js
 var is_array = __webpack_require__("a745");
 var is_array_default = /*#__PURE__*/__webpack_require__.n(is_array);
@@ -24597,9 +24600,13 @@ function _nonIterableRest() {
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
+// EXTERNAL MODULE: ./node_modules/esri-loader/dist/umd/esri-loader.js
+var esri_loader = __webpack_require__("afaa");
+
 // CONCATENATED MODULE: ./src/store/modules/esri.js
 
 
+Object(esri_loader["loadCss"])('https://js.arcgis.com/4.10/esri/css/main.css');
 /* harmony default export */ var esri = ({
   actions: {
     fetchFromLayer: function fetchFromLayer(_ref, params) {
@@ -24751,11 +24758,12 @@ function () {
 
           if (closure && getters.closureIsRoad) {
             dispatch('fetchDetour').then(function () {
-              return resolve(closure);
+              commit('setLoading', false);
+              resolve(closure);
             });
           } else {
-            commit('setLoading', false);
             resolve(closure);
+            commit('setLoading', false);
           }
         }).catch(function (err) {
           return reject(err);
@@ -24777,7 +24785,6 @@ function () {
         dispatch('fetchFromLayer', params).then(function (response) {
           var detour = response.features.length ? new Closure_Closure(response.features[0]) : null;
           commit('setActiveDetour', detour);
-          commit('setLoading', false);
           resolve(detour);
         }).catch(function (err) {
           return reject(err);
@@ -24897,14 +24904,12 @@ var defaultSelections = function defaultSelections() {
 
 
 
-
-Object(esri_loader["loadCss"])('https://js.arcgis.com/4.10/esri/css/main.css');
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vuex_esm);
 
 /* harmony default export */ var store = (new vuex_esm.Store({
   modules: _objectSpread({}, modules_namespaceObject),
   state: {
-    loading: true
+    loading: false
   },
   mutations: {
     setLoading: function setLoading(state) {

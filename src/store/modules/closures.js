@@ -40,10 +40,13 @@ export default {
           commit('setActiveClosure', closure)
 
           if (closure && getters.closureIsRoad) {
-            dispatch('fetchDetour').then(() => resolve(closure))
+            dispatch('fetchDetour').then(() => {
+              commit('setLoading', false)
+              resolve(closure)
+            })
           } else {
-            commit('setLoading', false)
             resolve(closure)
+            commit('setLoading', false)
           }
 
         }).catch(err => reject(err))
@@ -64,7 +67,6 @@ export default {
         dispatch('fetchFromLayer', params).then(response => {
           let detour = (response.features.length) ? new Closure(response.features[0]) : null
           commit('setActiveDetour', detour)
-          commit('setLoading', false)
           resolve(detour)
         }).catch(err => reject(err))
       })

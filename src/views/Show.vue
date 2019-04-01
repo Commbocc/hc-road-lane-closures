@@ -26,10 +26,16 @@ export default {
   methods: mapActions(['fetchClosure']),
   computed: mapState({
     loading: state => state.loading,
-    closure: state => state.closures.active
+  }),
+  data: () => ({
+    closure: null
   }),
   mounted () {
-    this.fetchClosure(this.id)
+    this.fetchClosure(this.id).then(closure => {
+      // TODO: vuex loading state should not show card before detour data is loaded
+      // temp fix: setting the closure once the promise is finished ensures any detour data is loaded
+      this.closure = closure
+    })
   }
 }
 </script>
