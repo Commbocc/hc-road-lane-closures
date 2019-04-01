@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>HcRoadLaneClosures demo</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./HcRoadLaneClosures.umd.js"></script>
+
+  <link rel="stylesheet" href="./HcRoadLaneClosures.css">
+</head>
+<body>
+
+  <div id="app" class="container py-5">
+    <demo></demo>
+  </div>
+
+  <script>
+    new Vue({
+      components: {
+        demo: HcRoadLaneClosures
+      }
+    }).$mount('#app')
+  </script>
+</body>
+</html>
