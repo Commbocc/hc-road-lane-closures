@@ -8,7 +8,7 @@ export default {
   actions: {
     search ({ dispatch, getters }) {
       dispatch('fetchClosures', {
-        where: getters.whereClause
+        where: getters.whereClause || '1=1'
       })
     }
   },
@@ -22,7 +22,8 @@ export default {
   },
   getters: {
     whereClause: state => {
-      var whereArr = [`CLOSURE_TYPE IN ('${state.selections.join("', '")}')`]
+      var whereArr = []
+      // whereArr.push(`CLOSURE_TYPE IN ('${state.selections.join("', '")}')`)
       if (state.searchTerm) {
         whereArr.push(`STREET LIKE '%${state.searchTerm}%'`)
       }

@@ -13,6 +13,6 @@ export default class Closure {
   }
 
   formatDate (field, format = 'LLL') {
-    return moment(this[field]).format(format)
+    return moment(this[field]).local().format(format)
   }
 }

@@ -17,7 +17,9 @@ export default {
 
       params.where = [
         params.where,
-        `Date_Opened>=CURRENT_TIMESTAMP+1`
+        `Date_Opened >= CURRENT_TIMESTAMP+1`,
+        "CLOSED not in ('', 'Other', 'Detour')",
+        `Extend_Notes <> 'B'`
       ].join(' AND ')
 
       return dispatch('fetchFromLayer', params).then(response => {
@@ -39,13 +41,12 @@ export default {
           let closure = (response.features.length) ? new Closure(response.features[0]) : null
           commit('setActiveClosure', closure)
 
-          if (closure && getters.closureIsRoad) {
+          if (closure) {
             dispatch('fetchDetour').then(() => {
               commit('setLoading', false)
               resolve(closure)
             })
           } else {
-            resolve(closure)
             commit('setLoading', false)
           }
 
@@ -58,7 +59,7 @@ export default {
       let params = {
         ...getters.defaultParams,
         where: [
-          "CLOSURE_TYPE='Detour'",
+          `CLOSURE_TYPE='Detour'`,
           `TTC_NBR='${state.active.TTC_NBR}'`
         ].join(' AND ')
       }
@@ -82,8 +83,5 @@ export default {
     setActiveDetour (state, data) {
       state.detour = data
     }
-  },
-  getters: {
-    closureIsRoad: state => (state.active.CLOSURE_TYPE == 'Road Closure')
   }
 }

@@ -23994,12 +23994,12 @@ var index_esm = {
 /* harmony default export */ var vuex_esm = (index_esm);
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1dcdf57b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Filters.vue?vue&type=template&id=4a6b2e1b&lang=html&
-var Filtersvue_type_template_id_4a6b2e1b_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.search($event)}}},[_c('div',{staticClass:"input-group mb-1"},[_c('label',{staticClass:"sr-only",attrs:{"for":"search"}},[_vm._v("Filter Closures")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.$store.state.filters.searchTerm),expression:"$store.state.filters.searchTerm"}],staticClass:"form-control",attrs:{"id":"search","placeholder":"Filter Closures..."},domProps:{"value":(_vm.$store.state.filters.searchTerm)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.$store.state.filters, "searchTerm", $event.target.value)}}}),_vm._m(0)]),_c('div',{staticClass:"form-check form-check-inline"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selections),expression:"selections"}],staticClass:"form-check-input",attrs:{"type":"checkbox","value":"Road Closure","id":"road-closures"},domProps:{"checked":Array.isArray(_vm.selections)?_vm._i(_vm.selections,"Road Closure")>-1:(_vm.selections)},on:{"change":function($event){var $$a=_vm.selections,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v="Road Closure",$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.selections=$$a.concat([$$v]))}else{$$i>-1&&(_vm.selections=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.selections=$$c}}}}),_c('label',{staticClass:"form-check-label",attrs:{"for":"road-closures"}},[_vm._v("\n      Road Closures\n    ")])]),_c('div',{staticClass:"form-check form-check-inline mr-sm-2"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selections),expression:"selections"}],staticClass:"form-check-input",attrs:{"type":"checkbox","value":"Lane Closure","id":"lane-closures"},domProps:{"checked":Array.isArray(_vm.selections)?_vm._i(_vm.selections,"Lane Closure")>-1:(_vm.selections)},on:{"change":function($event){var $$a=_vm.selections,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v="Lane Closure",$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.selections=$$a.concat([$$v]))}else{$$i>-1&&(_vm.selections=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.selections=$$c}}}}),_c('label',{staticClass:"form-check-label",attrs:{"for":"lane-closures"}},[_vm._v("\n      Lane Closures\n    ")])])])}
-var Filtersvue_type_template_id_4a6b2e1b_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"input-group-append input-group-btn"},[_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"submit"}},[_vm._v("Search")])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1dcdf57b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Filters.vue?vue&type=template&id=7746d212&lang=html&
+var Filtersvue_type_template_id_7746d212_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.search($event)}}},[_c('div',{staticClass:"input-group mb-1"},[_c('label',{staticClass:"sr-only",attrs:{"for":"search"}},[_vm._v("Filter Closures")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.$store.state.filters.searchTerm),expression:"$store.state.filters.searchTerm"}],staticClass:"form-control",attrs:{"id":"search","placeholder":"Filter Closures..."},domProps:{"value":(_vm.$store.state.filters.searchTerm)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.$store.state.filters, "searchTerm", $event.target.value)}}}),_vm._m(0)]),(false)?undefined:_vm._e()])}
+var Filtersvue_type_template_id_7746d212_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"input-group-append input-group-btn"},[_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"submit"}},[_vm._v("Search")])])}]
 
 
-// CONCATENATED MODULE: ./src/components/Filters.vue?vue&type=template&id=4a6b2e1b&lang=html&
+// CONCATENATED MODULE: ./src/components/Filters.vue?vue&type=template&id=7746d212&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
 var get_own_property_descriptor = __webpack_require__("268f");
@@ -24059,6 +24059,8 @@ function _objectSpread(target) {
 }
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Filters.vue?vue&type=script&lang=js&
 
+//
+//
 //
 //
 //
@@ -24219,8 +24221,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_Filtersvue_type_script_lang_js_,
-  Filtersvue_type_template_id_4a6b2e1b_lang_html_render,
-  Filtersvue_type_template_id_4a6b2e1b_lang_html_staticRenderFns,
+  Filtersvue_type_template_id_7746d212_lang_html_render,
+  Filtersvue_type_template_id_7746d212_lang_html_staticRenderFns,
   false,
   null,
   null,
@@ -24699,7 +24701,7 @@ function () {
     key: "formatDate",
     value: function formatDate(field) {
       var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'LLL';
-      return moment_default()(this[field]).format(format);
+      return moment_default()(this[field]).local().format(format);
     }
   }, {
     key: "path",
@@ -24732,7 +24734,7 @@ function () {
       params = assign_default()(_objectSpread({}, getters.defaultParams, {
         orderByFields: ['Date_Closed', 'STREET']
       }), params);
-      params.where = [params.where, "Date_Opened>=CURRENT_TIMESTAMP+1"].join(' AND ');
+      params.where = [params.where, "Date_Opened >= CURRENT_TIMESTAMP+1", "CLOSED not in ('', 'Other', 'Detour')", "Extend_Notes <> 'B'"].join(' AND ');
       return dispatch('fetchFromLayer', params).then(function (response) {
         commit('setLoading', false);
         return commit('setClosures', response.features.map(function (x) {
@@ -24756,13 +24758,12 @@ function () {
           var closure = response.features.length ? new Closure_Closure(response.features[0]) : null;
           commit('setActiveClosure', closure);
 
-          if (closure && getters.closureIsRoad) {
+          if (closure) {
             dispatch('fetchDetour').then(function () {
               commit('setLoading', false);
               resolve(closure);
             });
           } else {
-            resolve(closure);
             commit('setLoading', false);
           }
         }).catch(function (err) {
@@ -24801,11 +24802,6 @@ function () {
     },
     setActiveDetour: function setActiveDetour(state, data) {
       state.detour = data;
-    }
-  },
-  getters: {
-    closureIsRoad: function closureIsRoad(state) {
-      return state.active.CLOSURE_TYPE == 'Road Closure';
     }
   }
 });
@@ -24871,7 +24867,7 @@ var defaultSelections = function defaultSelections() {
       var dispatch = _ref.dispatch,
           getters = _ref.getters;
       dispatch('fetchClosures', {
-        where: getters.whereClause
+        where: getters.whereClause || '1=1'
       });
     }
   },
@@ -24885,7 +24881,7 @@ var defaultSelections = function defaultSelections() {
   },
   getters: {
     whereClause: function whereClause(state) {
-      var whereArr = ["CLOSURE_TYPE IN ('".concat(state.selections.join("', '"), "')")];
+      var whereArr = []; // whereArr.push(`CLOSURE_TYPE IN ('${state.selections.join("', '")}')`)
 
       if (state.searchTerm) {
         whereArr.push("STREET LIKE '%".concat(state.searchTerm, "%'"));

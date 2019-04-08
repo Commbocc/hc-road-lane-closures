@@ -9,18 +9,20 @@
       </div>
     </div>
 
-    <div class="form-check form-check-inline">
-      <input v-model="selections" class="form-check-input" type="checkbox" value="Road Closure" id="road-closures">
-      <label class="form-check-label" for="road-closures">
-        Road Closures
-      </label>
-    </div>
+    <div v-if="false">
+      <div class="form-check form-check-inline">
+        <input v-model="selections" class="form-check-input" type="checkbox" value="Road Closure" id="road-closures">
+        <label class="form-check-label" for="road-closures">
+          Road Closures
+        </label>
+      </div>
 
-    <div class="form-check form-check-inline mr-sm-2">
-      <input v-model="selections" class="form-check-input" type="checkbox" value="Lane Closure" id="lane-closures">
-      <label class="form-check-label" for="lane-closures">
-        Lane Closures
-      </label>
+      <div class="form-check form-check-inline mr-sm-2">
+        <input v-model="selections" class="form-check-input" type="checkbox" value="Lane Closure" id="lane-closures">
+        <label class="form-check-label" for="lane-closures">
+          Lane Closures
+        </label>
+      </div>
     </div>
 
   </form>
