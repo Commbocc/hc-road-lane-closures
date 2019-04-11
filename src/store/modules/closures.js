@@ -19,7 +19,7 @@ export default {
         params.where,
         `Date_Opened >= CURRENT_TIMESTAMP+1`,
         "CLOSED not in ('', 'Other', 'Detour')",
-        `Extend_Notes <> 'B'`
+        // `Extend_Notes <> 'B'`
       ].join(' AND ')
 
       return dispatch('fetchFromLayer', params).then(response => {

@@ -24734,7 +24734,7 @@ function () {
       params = assign_default()(_objectSpread({}, getters.defaultParams, {
         orderByFields: ['Date_Closed', 'STREET']
       }), params);
-      params.where = [params.where, "Date_Opened >= CURRENT_TIMESTAMP+1", "CLOSED not in ('', 'Other', 'Detour')", "Extend_Notes <> 'B'"].join(' AND ');
+      params.where = [params.where, "Date_Opened >= CURRENT_TIMESTAMP+1", "CLOSED not in ('', 'Other', 'Detour')"].join(' AND ');
       return dispatch('fetchFromLayer', params).then(function (response) {
         commit('setLoading', false);
         return commit('setClosures', response.features.map(function (x) {
