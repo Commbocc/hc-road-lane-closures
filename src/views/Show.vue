@@ -9,9 +9,14 @@
 
     <div v-else-if="closure" is="ClosureCard"></div>
 
-    <p v-else class="h4 text-center m-0">
-      No Result
-    </p>
+    <div v-else class="text-center">
+      <h4><em>{{ $route.path }}</em> Returned No Result</h4>
+      <p>
+        <router-link to="/">View All Closures</router-link>
+      </p>
+
+      <small v-if="status" class="text-muted">{{ status }}</small>
+    </div>
 
   </div>
 </template>
@@ -28,13 +33,17 @@ export default {
     loading: state => state.loading,
   }),
   data: () => ({
-    closure: null
+    closure: null,
+    status: null
   }),
   mounted () {
     this.fetchClosure(this.id).then(closure => {
       // TODO: vuex loading state should not show card before detour data is loaded
       // temp fix: setting the closure once the promise is finished ensures any detour data is loaded
       this.closure = closure
+    }).catch(err => {
+      this.status = err
+      this.closure = null
     })
   }
 }

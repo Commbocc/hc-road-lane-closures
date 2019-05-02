@@ -32,9 +32,9 @@
         <dd>{{ closure.TO_STREET }}</dd>
 
         <dt class="font-weight-bold">Date Closed</dt>
-        <dd>{{ closure.formatDate('Date_Closed', 'LLLL') }}</dd>
+        <dd>{{ closure.formatDate('Date_Closed') }}</dd>
         <dt class="font-weight-bold">Date Reopened</dt>
-        <dd>{{ closure.formatDate('Date_Opened', 'LLLL') }}</dd>
+        <dd>{{ closure.formatDate('Date_Opened') }}</dd>
 
         <dt class="font-weight-bold">Reason</dt>
         <dd>{{ closure.REASON }}</dd>

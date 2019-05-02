@@ -43,14 +43,13 @@ export default {
 
           if (closure) {
             dispatch('fetchDetour').then(() => {
-              commit('setLoading', false)
               resolve(closure)
             })
-          } else {
-            commit('setLoading', false)
           }
 
-        }).catch(err => reject(err))
+        }).catch(err => reject(err)).then(() => {
+          commit('setLoading', false)
+        })
       })
     },
     fetchDetour ({ state, dispatch, commit, getters }) {

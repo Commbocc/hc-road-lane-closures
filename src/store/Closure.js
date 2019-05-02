@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 export default class Closure {
   constructor (feature) {
     this.geometry = feature.geometry
@@ -12,7 +10,7 @@ export default class Closure {
     return `/${this.OBJECTID}`
   }
 
-  formatDate (field, format = 'LLL') {
-    return moment(this[field]).local().format(format)
+  formatDate (field) {
+    return new Date(this[field]).toLocaleString()
   }
 }
