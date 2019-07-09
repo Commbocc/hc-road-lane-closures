@@ -7653,7 +7653,7 @@ Object(esri_loader["loadCss"])('https://js.arcgis.com/4.10/esri/css/main.css');
             FeatureLayer = _ref3[0];
 
         return new FeatureLayer({
-          url: 'https://services.arcgis.com/apTfC6SUmnNfnxuF/ArcGIS/rest/services/Active_TTC_Permits_Public_View/FeatureServer/0'
+          url: 'https://services.arcgis.com/apTfC6SUmnNfnxuF/ArcGIS/rest/services/Active_TTC_Permits_PublicView/FeatureServer/0'
         });
       });
     },
