@@ -17,7 +17,7 @@ export default {
         'esri/layers/FeatureLayer'
       ]).then(([FeatureLayer]) => {
         return new FeatureLayer({
-          url: 'https://services.arcgis.com/apTfC6SUmnNfnxuF/ArcGIS/rest/services/Active_TTC_Permits_Public_View/FeatureServer/0'
+          url: 'https://services.arcgis.com/apTfC6SUmnNfnxuF/ArcGIS/rest/services/Active_TTC_Permits_PublicView/FeatureServer/0'
         })
       })
     },
