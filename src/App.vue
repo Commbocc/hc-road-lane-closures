@@ -12,4 +12,4 @@ export default {
 }
 </script>
 
-<style src="./assets/main.scss" lang="scss" />
+<style src="./assets/main.css" />
