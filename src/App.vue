@@ -11,5 +11,3 @@ export default {
   store
 }
 </script>
-
-<style src="./assets/main.css" />

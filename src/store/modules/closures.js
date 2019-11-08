@@ -12,11 +12,12 @@ export default {
 
       params = Object.assign({
         ...getters.defaultParams,
-        orderByFields: ['Date_Closed', 'STREET']
+        orderByFields: ['Date_Closed desc', 'STREET']
       }, params)
 
       params.where = [
         params.where,
+        'STREET is not NULL',
         `Date_Opened >= CURRENT_TIMESTAMP+1`,
         "CLOSED not in ('', 'Other', 'Detour')",
         // `Extend_Notes <> 'B'`
