@@ -10,7 +10,6 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3",
     "esri-loader": "^3.0.0",
     "vue": "^3.0.5"
   },

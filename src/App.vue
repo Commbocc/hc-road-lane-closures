@@ -41,5 +41,3 @@ export default {
   components: { Filters, ClosuresTable, Pagination, ClosuresMap },
 }
 </script>
-
-<style lang="scss" src="./assets/main.scss"></style>
