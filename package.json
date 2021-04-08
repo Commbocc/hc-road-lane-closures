@@ -1,27 +1,25 @@
 {
   "name": "hc-road-lane-closures",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.0",
+  "main": "dist/hc-road-lane-closures.umd.js",
+  "module": "dist/hc-road-lane-closures.es.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --formats umd-min --name HcRoadLaneClosures",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "esri-loader": "^2.6.0",
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "bootstrap": "^5.0.0-beta3",
+    "esri-loader": "^3.0.0",
+    "vue": "^3.0.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.22.0",
+    "eslint-plugin-vue": "^7.8.0",
+    "sass": "^1.32.8",
+    "vite": "^2.1.0"
   }
 }

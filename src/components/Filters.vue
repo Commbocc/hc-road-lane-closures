@@ -1,62 +1,51 @@
-<template lang="html">
-  <form @submit.prevent="search" class="">
-
-    <div class="input-group mb-1">
-      <label for="search" class="sr-only">Filter Closures</label>
-      <input v-model="$store.state.filters.searchTerm" class="form-control" id="search" placeholder="Filter Closures...">
-      <div class="input-group-append input-group-btn">
-        <button type="submit" class="btn btn-secondary">Search</button>
-      </div>
+<template>
+  <div class="d-flex justify-content-between align-items-center flex-wrap">
+    <div class="flex-grow-1">
+      <input
+        v-model="filters.search"
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Filter by street name"
+      />
     </div>
 
-    <div v-if="false">
+    <div class="p-2">
       <div class="form-check form-check-inline">
-        <input v-model="selections" class="form-check-input" type="checkbox" value="Road Closure" id="road-closures">
-        <label class="form-check-label" for="road-closures">
-          Road Closures
+        <input
+          v-model="filters.upcoming"
+          class="form-check-input"
+          type="radio"
+          name="currentOrUpcomingRadioGroup"
+          id="inlineRadio1"
+          :value="false"
+        />
+        <label class="form-check-label" for="inlineRadio1">
+          Current Closures
         </label>
       </div>
-
-      <div class="form-check form-check-inline mr-sm-2">
-        <input v-model="selections" class="form-check-input" type="checkbox" value="Lane Closure" id="lane-closures">
-        <label class="form-check-label" for="lane-closures">
-          Lane Closures
+      <div class="form-check form-check-inline">
+        <input
+          v-model="filters.upcoming"
+          class="form-check-input"
+          type="radio"
+          name="currentOrUpcomingRadioGroup"
+          id="inlineRadio2"
+          :value="true"
+        />
+        <label class="form-check-label" for="inlineRadio2">
+          Upcoming Closures
         </label>
       </div>
     </div>
-
-  </form>
+  </div>
 </template>
 
 <script>
-import { mapActions, mapMutations } from 'vuex'
+import { filters } from '../lib/closures'
 
 export default {
-  methods: {
-    ...mapActions(['search']),
-    ...mapMutations([
-      'setFilterSelections',
-      'resetFilterSelections'
-    ])
+  setup() {
+    return { filters }
   },
-  computed: {
-    selections: {
-      get () {
-        return this.$store.state.filters.selections
-      },
-      set (value) {
-        this.setFilterSelections(value)
-      }
-    }
-  },
-  watch: {
-    selections () {
-      if (!this.selections.length) {
-        this.$nextTick(() => {
-          this.resetFilterSelections()
-        })
-      }
-    }
-  }
 }
 </script>
