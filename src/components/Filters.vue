@@ -10,7 +10,8 @@
     </div>
 
     <div class="p-2">
-      <div class="form-check form-check-inline">
+      <!-- <div class="form-check form-check-inline"> -->
+        <label class="form-check-label radio-inline" for="inlineRadio1">
         <input
           v-model="filters.upcoming"
           class="form-check-input"
@@ -19,11 +20,11 @@
           id="inlineRadio1"
           :value="false"
         />
-        <label class="form-check-label" for="inlineRadio1">
           Current Closures
         </label>
-      </div>
-      <div class="form-check form-check-inline">
+      <!-- </div> -->
+      <!-- <div class="form-check form-check-inline"> -->
+        <label class="form-check-label radio-inline" for="inlineRadio2">
         <input
           v-model="filters.upcoming"
           class="form-check-input"
@@ -32,10 +33,9 @@
           id="inlineRadio2"
           :value="true"
         />
-        <label class="form-check-label" for="inlineRadio2">
           Upcoming Closures
         </label>
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>

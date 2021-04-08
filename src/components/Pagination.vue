@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="col-sm-9">
         <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
+          <ul class="m-0 pagination justify-content-center">
             <li
               class="page-item"
               :class="pagination.page == 1 ? 'disabled' : null"
