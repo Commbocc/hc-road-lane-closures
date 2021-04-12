@@ -1,5 +1,5 @@
 <template>
-  <div class="embed-responsive embed-responsive-16by9">
+  <div class="ratio ratio-16x9">
     <div id="map" ref="mapRef" class="embed-responsive-item"></div>
   </div>
 </template>

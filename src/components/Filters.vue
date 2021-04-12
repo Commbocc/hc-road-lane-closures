@@ -4,14 +4,13 @@
       <input
         v-model="filters.search"
         type="text"
-        class="form-control form-control-lg"
+        class="form-control"
         placeholder="Filter by street name"
       />
     </div>
 
     <div class="p-2">
-      <!-- <div class="form-check form-check-inline"> -->
-        <label class="form-check-label radio-inline" for="inlineRadio1">
+      <div class="form-check form-check-inline">
         <input
           v-model="filters.upcoming"
           class="form-check-input"
@@ -20,11 +19,11 @@
           id="inlineRadio1"
           :value="false"
         />
+        <label class="form-check-label" for="inlineRadio1">
           Current Closures
         </label>
-      <!-- </div> -->
-      <!-- <div class="form-check form-check-inline"> -->
-        <label class="form-check-label radio-inline" for="inlineRadio2">
+      </div>
+      <div class="form-check form-check-inline">
         <input
           v-model="filters.upcoming"
           class="form-check-input"
@@ -33,9 +32,10 @@
           id="inlineRadio2"
           :value="true"
         />
+        <label class="form-check-label" for="inlineRadio2">
           Upcoming Closures
         </label>
-      <!-- </div> -->
+      </div>
     </div>
   </div>
 </template>

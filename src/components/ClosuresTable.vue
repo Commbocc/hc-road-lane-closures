@@ -1,18 +1,17 @@
 <template>
   <div v-if="closures.length" class="table-responsive">
-    <table class="table table-striped table-sm">
+    <table class="table table-striped table-sm small">
       <thead>
         <tr>
           <th>Street</th>
           <th>Type</th>
           <th>Closed</th>
           <th>Opened</th>
-          <th>TTC#</th>
         </tr>
       </thead>
       <tbody>
         <template v-for="closure in closures" :key="closure.objectid">
-          <tr>
+          <tr :id="`closure-${closure.objectid}`">
             <td>
               <strong>
                 <a
@@ -25,7 +24,10 @@
 
               <br />
               <small>
-                from <strong>{{ closure['FROM_STREET'] }}</strong> to
+                from
+                <strong>{{ closure['FROM_STREET'] }}</strong>
+
+                to
                 <strong>{{ closure['TO_STREET'] }}</strong>
               </small>
             </td>
@@ -37,9 +39,6 @@
             </td>
             <td>
               {{ formatDate(closure['DATE_OPENED']) }}
-            </td>
-            <td>
-              {{ closure['TTC_NBR'] }}
             </td>
           </tr>
         </template>
