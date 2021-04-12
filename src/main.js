@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import './assets/main.scss'
+import 'iframe-resizer/js/iframeResizer.contentWindow'
 
-export const app = createApp(App)
-
-if (import.meta.env.DEV) app.mount('#app')
+createApp(App).mount('#app')

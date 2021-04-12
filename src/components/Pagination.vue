@@ -2,7 +2,7 @@
   <div v-if="pages > 1">
     <div class="row align-items-center">
       <div class="col-sm-9">
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation">
           <ul class="m-0 pagination justify-content-center">
             <li
               class="page-item"
