@@ -8,7 +8,7 @@
   <div v-else>
     <ClosuresMap />
 
-    <Filters class="bg-light p-2" />
+    <Filters class="my-3" />
 
     <div v-if="appState.loading" class="p-5 text-center">
       <div class="spinner-border text-dark" role="status">
