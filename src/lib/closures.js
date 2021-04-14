@@ -1,7 +1,7 @@
 import { reactive, ref, computed, watch } from 'vue'
 
 import { featureLayer } from './esri'
-import { mapViewExtent, mapRef } from './map'
+import { mapRef } from './map'
 
 // state
 export const appState = reactive({
@@ -68,11 +68,11 @@ export const query = computed(() => ({
   returnGeometry: true,
   num: pagination.limit,
   start: offset.value,
-  geometry: mapViewExtent.value,
 }))
 
 // query method
 export async function queryClosures() {
+  console.log('queryClosures')
   appState.error = ''
   appState.loading = true
 
@@ -82,7 +82,6 @@ export async function queryClosures() {
     // set count
     count.value = await fl.queryFeatureCount({
       where: where.value,
-      geometry: mapViewExtent.value,
     })
 
     // fetch features

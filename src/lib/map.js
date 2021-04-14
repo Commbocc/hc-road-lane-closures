@@ -2,12 +2,9 @@ import { ref, watch, onMounted } from 'vue'
 import { loadModules } from 'esri-loader'
 
 import { webmap } from './esri'
-import { activeFeature, activeClosure, where, queryClosures } from './closures'
+import { activeFeature, activeClosure, where } from './closures'
 
 export const mapRef = ref(null)
-export const mapViewExtent = ref(undefined)
-
-watch([mapViewExtent], () => queryClosures())
 
 //
 export function initMap() {
@@ -48,12 +45,6 @@ export function initMap() {
 
     const layer = map.layers.getItemAt(0)
     const layerView = await view.whenLayerView(layer)
-
-    // watchers
-    layerView.watch('updating', (value) => {
-      if (value) return
-      mapViewExtent.value = { type: 'extent', ...view.extent.toJSON() }
-    })
 
     // filter map features
     watch(
