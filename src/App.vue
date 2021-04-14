@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import { appState } from './lib/closures'
 import { initFeatureLayer } from './lib/esri'
+import { queryClosures, appState } from './lib/closures'
 
 import Filters from './components/Filters.vue'
 import ClosuresTable from './components/ClosuresTable.vue'
@@ -33,7 +33,7 @@ import ClosuresMap from './components/ClosuresMap.vue'
 
 export default {
   setup() {
-    initFeatureLayer()
+    initFeatureLayer().then(queryClosures)
 
     return { appState }
   },

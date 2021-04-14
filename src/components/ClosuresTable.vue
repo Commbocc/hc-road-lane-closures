@@ -48,7 +48,7 @@
 
   <div v-else class="text-center py-5">
     <p class="h4">No Closures</p>
-    <p>Try zooming out of the map or refining your search.</p>
+    <p>Try refining your search.</p>
   </div>
 </template>
 

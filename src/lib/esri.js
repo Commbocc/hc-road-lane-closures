@@ -2,7 +2,7 @@ import { ref, computed } from 'vue'
 import { loadModules } from 'esri-loader'
 
 // https://hillsborough.maps.arcgis.com/home/webmap/viewer.html?webmap=36ec601ba440417ead12dc49d612665d
-const portalItemId = '36ec601ba440417ead12dc49d612665d'
+const portalItem = { id: '36ec601ba440417ead12dc49d612665d' }
 
 const layer = ref(null)
 
@@ -13,11 +13,7 @@ export const featureLayer = computed(async () => {
 
 export const webmap = computed(async () => {
   const [WebMap] = await loadModules(['esri/WebMap'])
-  return new WebMap({
-    portalItem: {
-      id: portalItemId,
-    },
-  })
+  return new WebMap({ portalItem })
 })
 
 export async function initFeatureLayer() {
