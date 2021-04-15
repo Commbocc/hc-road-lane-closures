@@ -1,5 +1,5 @@
 <template>
-  <div v-if="closures.length" class="table-responsive">
+  <div v-if="closures.data.length" class="table-responsive">
     <table class="table table-striped table-sm small">
       <thead>
         <tr>
@@ -10,35 +10,40 @@
         </tr>
       </thead>
       <tbody>
-        <template v-for="closure in closures" :key="closure.objectid">
-          <tr :id="`closure-${closure.objectid}`">
+        <template
+          v-for="{ attributes } in closures.data"
+          :key="attributes.objectid"
+        >
+          <tr :id="`closure-${attributes.objectid}`">
             <td>
               <strong>
                 <a
-                  href="#map"
-                  @click.prevent="activateClosure(closure.objectid)"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#popupModalLabel"
+                  @click="activateClosure(attributes.objectid)"
                 >
-                  {{ closure['STREET'] }}
+                  {{ attributes['STREET'] }}
                 </a>
               </strong>
 
               <br />
               <small>
                 from
-                <strong>{{ closure['FROM_STREET'] }}</strong>
+                <strong>{{ attributes['FROM_STREET'] }}</strong>
 
                 to
-                <strong>{{ closure['TO_STREET'] }}</strong>
+                <strong>{{ attributes['TO_STREET'] }}</strong>
               </small>
             </td>
             <td>
-              {{ closure['CLOSURE_TYPE'].split('_').join(' ') }}
+              {{ attributes['CLOSURE_TYPE'].split('_').join(' ') }}
             </td>
             <td>
-              {{ formatDate(closure['DATE_CLOSED']) }}
+              {{ formatDate(attributes['DATE_CLOSED']) }}
             </td>
             <td>
-              {{ formatDate(closure['DATE_OPENED']) }}
+              {{ formatDate(attributes['DATE_OPENED']) }}
             </td>
           </tr>
         </template>
@@ -53,17 +58,12 @@
 </template>
 
 <script>
-import { closures, activeClosure, activateClosure } from '../lib/closures'
+import { closures, activateClosure } from '../lib/closures'
+import { formatDate } from '../util'
 
 export default {
   setup() {
-    return { closures, activeClosure, activateClosure }
-  },
-
-  methods: {
-    formatDate(stamp) {
-      return new Date(stamp).toLocaleString()
-    },
+    return { closures, activateClosure, formatDate }
   },
 }
 </script>

@@ -1,26 +1,23 @@
 import { reactive, ref, computed, watch } from 'vue'
-
 import { featureLayer } from './esri'
-import { mapRef } from './map'
+import { debounce } from '../util'
 
 // state
-export const appState = reactive({
+export const closures = reactive({
   loading: false,
   error: '',
   data: [],
 })
 
-export const closures = computed(() =>
-  appState.data.map(({ attributes }) => attributes)
-)
-export const activeClosure = ref(null)
-export const activeFeature = computed(() =>
-  appState.data.find((f) => f.attributes?.objectid == activeClosure.value)
+// active closure
+export const activeClosureId = ref(null)
+
+export const activeClosure = computed(() =>
+  closures.data.find((f) => f.attributes?.objectid == activeClosureId.value)
 )
 
 export function activateClosure(id) {
-  activeClosure.value = id
-  mapRef.value.scrollIntoView()
+  activeClosureId.value = id
 }
 
 // pagination
@@ -39,10 +36,13 @@ export const filters = reactive({
 })
 
 // watchers
-watch([pagination, filters], () => {
-  if (pagination.page > pages.value) return (pagination.page = 1)
-  queryClosures()
-})
+watch(
+  [pagination, filters],
+  debounce(() => {
+    if (pagination.page > pages.value) return (pagination.page = 1)
+    queryClosures()
+  })
+)
 
 // query
 
@@ -72,9 +72,8 @@ export const query = computed(() => ({
 
 // query method
 export async function queryClosures() {
-  console.log('queryClosures')
-  appState.error = ''
-  appState.loading = true
+  closures.error = ''
+  closures.loading = true
 
   try {
     const fl = await featureLayer.value
@@ -88,7 +87,7 @@ export async function queryClosures() {
     const { features } = await fl.queryFeatures(query.value)
 
     // set features
-    appState.data = features.map((f) => ({
+    closures.data = features.map((f) => ({
       ...f.toJSON(),
       popupTemplate: fl.popupInfo,
     }))
@@ -96,8 +95,8 @@ export async function queryClosures() {
     //
     // console.log()
   } catch (err) {
-    appState.error = err.message
+    closures.error = err.message
   } finally {
-    appState.loading = false
+    closures.loading = false
   }
 }
