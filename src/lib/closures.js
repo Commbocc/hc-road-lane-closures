@@ -76,7 +76,7 @@ export async function queryClosures() {
   closures.loading = true
 
   try {
-    const fl = await featureLayer.value
+    const fl = await featureLayer()
 
     // set count
     count.value = await fl.queryFeatureCount({
@@ -86,14 +86,11 @@ export async function queryClosures() {
     // fetch features
     const { features } = await fl.queryFeatures(query.value)
 
-    // set features
+    // set closures
     closures.data = features.map((f) => ({
       ...f.toJSON(),
       popupTemplate: fl.popupInfo,
     }))
-
-    //
-    // console.log()
   } catch (err) {
     closures.error = err.message
   } finally {

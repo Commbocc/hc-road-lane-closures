@@ -1,4 +1,6 @@
 <template>
+  <ClosuresMap />
+
   <div v-if="closures.error" class="py-5">
     <div class="alert alert-warning" role="alert">
       {{ closures.error }}
@@ -6,8 +8,6 @@
   </div>
 
   <div v-else>
-    <ClosuresMap />
-
     <Filters class="my-3" />
 
     <div v-if="closures.loading" class="p-5 text-center">
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 import { initFeatureLayer } from './lib/esri'
 import { queryClosures, closures } from './lib/closures'
 
@@ -36,7 +37,10 @@ import ModalPopup from './components/ModalPopup.vue'
 
 export default {
   setup() {
-    initFeatureLayer().then(queryClosures)
+    onMounted(async () => {
+      await initFeatureLayer()
+      await queryClosures()
+    })
 
     return { closures }
   },

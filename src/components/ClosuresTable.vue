@@ -20,7 +20,7 @@
                 <a
                   href="#"
                   data-bs-toggle="modal"
-                  data-bs-target="#popupModalLabel"
+                  data-bs-target="#popupModal"
                   @click="activateClosure(attributes.objectid)"
                 >
                   {{ attributes['STREET'] }}

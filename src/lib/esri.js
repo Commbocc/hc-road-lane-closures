@@ -1,23 +1,21 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { loadModules } from 'esri-loader'
 
 // https://hillsborough.maps.arcgis.com/home/webmap/viewer.html?webmap=36ec601ba440417ead12dc49d612665d
 const portalItem = { id: '36ec601ba440417ead12dc49d612665d' }
 
-const layer = ref(null)
-
-export const featureLayer = computed(async () => {
-  const [FeatureLayer] = await loadModules(['esri/layers/FeatureLayer'])
-  return new FeatureLayer(layer.value)
-})
-
-export const webmap = computed(async () => {
-  const [WebMap] = await loadModules(['esri/WebMap'])
-  return new WebMap({ portalItem })
-})
+const featureLayerJson = ref(null)
 
 export async function initFeatureLayer() {
-  const map = await webmap.value
+  const [WebMap] = await loadModules(['esri/WebMap'])
+
+  const map = new WebMap({ portalItem })
   await map.load()
-  layer.value = map.layers.items[0].toJSON()
+
+  featureLayerJson.value = map.layers.items[0].toJSON()
+}
+
+export async function featureLayer() {
+  const [FeatureLayer] = await loadModules(['esri/layers/FeatureLayer'])
+  return new FeatureLayer(featureLayerJson.value)
 }
