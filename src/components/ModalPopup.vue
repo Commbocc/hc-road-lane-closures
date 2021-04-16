@@ -34,7 +34,7 @@ export default {
         </div>
 
         <!--  -->
-        <div ref="popupRef" class="modal-body"></div>
+        <div ref="popupRef" class="modal-body p-1"></div>
 
         <div class="modal-footer">
           <button
@@ -49,3 +49,21 @@ export default {
     </div>
   </div>
 </template>
+
+<style lang="scss">
+.modal {
+  // esri popup
+  .esri-popup {
+    & > .esri-popup__pointer,
+    & > .esri-popup__main-container > *:not(.esri-popup__content) {
+      display: none;
+    }
+  }
+
+  .esri-popup__main-container {
+    width: 100%;
+    height: auto;
+    max-height: initial;
+  }
+}
+</style>

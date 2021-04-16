@@ -10,18 +10,3 @@ $primary: #054173 !default;
 $enable-rounded: false !default;
 
 @import 'bootstrap';
-
-// esri popup
-.esri-popup {
-  & > .esri-popup__pointer,
-  & > .esri-popup__main-container > *:not(.esri-popup__content) {
-    display: none;
-  }
-}
-
-.esri-feature-fields {
-  @extend .table-responsive;
-}
-.esri-widget__table {
-  @extend .table, .table-sm, .table-striped, .small;
-}
