@@ -64,7 +64,11 @@ export const query = computed(() => ({
   where: where.value,
   f: 'json',
   outFields: '*',
-  orderByFields: ['DATE_CLOSED asc', 'DATE_OPENED asc', 'STREET asc'],
+  orderByFields: [
+    `DATE_CLOSED ${filters.upcoming ? 'asc' : 'desc'}`,
+    'DATE_OPENED asc',
+    'STREET asc',
+  ],
   returnGeometry: true,
   num: pagination.limit,
   start: offset.value,
