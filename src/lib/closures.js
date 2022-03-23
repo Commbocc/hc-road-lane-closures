@@ -1,5 +1,5 @@
 import { reactive, ref, computed, watch } from 'vue'
-import { featureLayer } from './esri'
+import { featureLayer, featureLayerJson } from './esri'
 import { debounce } from '../util'
 
 // state
@@ -49,6 +49,7 @@ watch(
 // query's where clause
 export const where = computed(() =>
   [
+    featureLayerJson.value?.layerDefinition?.definitionExpression,
     'DATE_OPENED >= CURRENT_TIMESTAMP+1',
     filters.search ? `STREET like '%${filters.search}%'` : null,
     filters.upcoming
@@ -81,6 +82,8 @@ export async function queryClosures() {
 
   try {
     const fl = await featureLayer()
+
+    console.log('query def', fl.definitionExpression)
 
     // set count
     count.value = await fl.queryFeatureCount({

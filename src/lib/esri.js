@@ -13,11 +13,12 @@ export async function webMap() {
 
 // feature layer
 
-const featureLayerJson = ref(null)
+export const featureLayerJson = ref(null)
 
 export async function featureLayer() {
   const [FeatureLayer] = await loadModules(['esri/layers/FeatureLayer'])
-  return new FeatureLayer(featureLayerJson.value)
+  const fl = new FeatureLayer(featureLayerJson.value)
+  return fl
 }
 
 export async function initFeatureLayer() {
